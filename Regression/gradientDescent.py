@@ -74,6 +74,7 @@ def MBGD(x, y, alpha, eps, maxInterations, batch):
     loss = 10
     iter_count = 0
     while loss > eps and iter_count < maxInterations:
+        # 随机选择一个批量
         idx = np.random.randint(m / 10)
         xCur = x[idx]
         h = np.dot(xCur, theta)
